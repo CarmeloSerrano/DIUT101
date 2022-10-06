@@ -34,9 +34,9 @@ public class DICommonCLI {
 
             Options opciones = new Options();
             
-            opciones.addOption("w", true, "Hola Mundo");
-            opciones.addOption("h", true, "Imprime mensaje de ayuda");
-            opciones.addOption("y", true, "Tras n años de vida");
+            opciones.addOption("w", false, "Hola Mundo");
+            opciones.addOption("h", false, "Imprime mensaje de ayuda");
+            opciones.addOption("y", false, "Tras n años de vida");
             
             OptionGroup group = new OptionGroup();
             
@@ -50,27 +50,17 @@ public class DICommonCLI {
             if(cmd.hasOption("w")) {
                 System.out.println("Hola mundo");
             }
-            else {
-            }
             if(cmd.hasOption("n")) {
                 System.out.println("Hola Mundo Bonito");
-            }
-            else {
             }
             if(cmd.hasOption("c")) {
                 System.out.println("Hola mundo Cruel");
             }
-            else {
-            }
             if (cmd.hasOption("h")) {
                 System.out.println("El programa se usa así");
             }
-            else {
-            }
             if (cmd.hasOption("y")) {
                 System.out.println("Tras n años de vida");
-            }
-            else {
             }
         } catch (ParseException ex) {
             Logger.getLogger(DICommonCLI.class.getName()).log(Level.SEVERE, null, ex);
